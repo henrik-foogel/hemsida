@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main class="home" v-touch:swipe.left="swipe">
+    <Home/>
+  </main>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Home from "@/components/Home.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld
+    Home
+  },
+  methods: {
+    swipe() {
+      this.$store.commit("swipe", 1);
+    }
   }
-}
+};
 </script>
+<style lang="sass">
+</style>

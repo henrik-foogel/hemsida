@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+
+  #app {
+    margin: 0;
+    height: 100vh;
+    font-family: "Noto Sans", sans-serif;
+    overflow: hidden;
+
+    .slider {
+      width: 200vw;
+      display: flex;
+      height: inherit;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+
+      &.slide-0 {
+        transform: translate3d(0, 0, 0);
+      }
+
+      &.slide-1 {
+        transform: translate3d(-100vw, 0, 0);
+      }
+
+      main {
+        &.home {
+          @extend %center;
+
+          .container {
+            display: grid;
+            background: #6b8ba4;
+            border-radius: 1rem;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 7rem 37.2rem 4rem;
+            grid-template-areas:
+              "home-title"
+              "home-content"
+              "home-footer";
+
+            .home-title {
+              grid-area: home-title;
+              font-size: 2rem;
+              display: flex;
+              flex-direction: column;
+              @extend %center;
+              font-family: "Nunito", sans-serif;
+              font-weight: 800;
+              h1 {
+                flex: 1;
+                margin: 2rem 0 0;
+              }
+              p {
+                flex: 2;
+                font-size: 1rem;
+                margin: 0;
+              }
+            }
+
+            .home-content {
+              grid-area: home-content;
+              @extend %center;
+              display: flex;
+              flex-direction: column;
+
+              img {
+                flex: 1;
+                width: 9rem;
+                border-radius: 999rem;
+                margin: 0 0 2rem;
+              }
+
+              .home-text {
+                flex: 2;
+                text-align: justify;
+                margin: 1rem;
+              }
+            }
+
+            .home-footer {
+              grid-area: home-footer;
+              @extend %center;
+              border-top: 1px solid black;
+              padding: 1rem;
+              align-self: flex-end;
+            }
+          }
+        }
+
+        &.gallery {
+          align-items: center;
+
+          .container {
+            background: #6b8ba4;
+            border-radius: 1rem;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            width: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: 5rem 40rem;
+            grid-template-areas:
+              "gallery-title"
+              "gallery-content";
+
+            .gallery-title {
+              grid-area: gallery-title;
+              @extend %center;
+              font-size: 2rem;
+
+              h1 {
+                  margin: 0;
+              }
+            }
+
+            .gallery-content {
+              grid-area: gallery-content;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              justify-content: center;
+              flex-direction: row;
+              max-height: 100vh;
+
+              .gallery {
+                width: 20vw;
+                height: 20vw;
+                margin: 10px;
+                border: 3px solid #000;
+                box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+                max-width: 23vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
