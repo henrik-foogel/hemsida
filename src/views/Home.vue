@@ -17,6 +17,9 @@ export default {
     swipe() {
       this.$store.commit("swipe", 1);
     }
+  },
+  beforeMount() {
+    this.$store.dispatch("getMovies");
   }
 };
 </script>

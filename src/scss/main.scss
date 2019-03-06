@@ -7,22 +7,25 @@
   align-items: center;
 }
 
+$pink: rgb(255, 0, 179);
+
 body {
   margin: 0;
   height: 100vh;
-  background: #000;
+  background: $pink;
 
   #app {
     margin: 0;
     height: 100vh;
     font-family: "Noto Sans", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 
     .slider {
-      width: 200vw;
+      width: 400vw;
       display: flex;
       height: inherit;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: hidden;
       transition: transform 0.2s ease;
 
       &.slide-0 {
@@ -33,19 +36,28 @@ body {
         transform: translate3d(-100vw, 0, 0);
       }
 
+      &.slide-2 {
+        transform: translate3d(-200vw, 0, 0);
+      }
+
+      &.slide-3 {
+        transform: translate3d(-300vw, 0, 0);
+      }
+
       main {
         &.home {
           @extend %center;
 
           .container {
+            justify-self: center;
             display: grid;
-            background: #6b8ba4;
+            background: black;
+            color: #fff;
             border-radius: 1rem;
             width: 100vw;
             height: 100vh;
-            margin: 0;
             grid-template-columns: 1fr;
-            grid-template-rows: 7rem 37.2rem 4rem;
+            grid-template-rows: 7rem auto 3rem;
             grid-template-areas:
               "home-title"
               "home-content"
@@ -57,11 +69,11 @@ body {
               display: flex;
               flex-direction: column;
               @extend %center;
-              font-family: "Nunito", sans-serif;
               font-weight: 800;
               h1 {
                 flex: 1;
                 margin: 2rem 0 0;
+                color: $pink;
               }
               p {
                 flex: 2;
@@ -73,8 +85,10 @@ body {
             .home-content {
               grid-area: home-content;
               @extend %center;
+              justify-self: center;
               display: flex;
               flex-direction: column;
+              max-width: 500px;
 
               img {
                 flex: 1;
@@ -86,7 +100,17 @@ body {
               .home-text {
                 flex: 2;
                 text-align: justify;
-                margin: 1rem;
+                padding: 1rem;
+              }
+
+              .home-swipe-text {
+                border: 2px solid $pink;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                font-weight: 900;
+                color: $pink;
+                background: #000;
+                margin-bottom: 1rem;
               }
             }
 
@@ -94,8 +118,38 @@ body {
               grid-area: home-footer;
               @extend %center;
               border-top: 1px solid black;
-              padding: 1rem;
-              align-self: flex-end;
+              padding: 0.5rem 0 0 0;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: baseline;
+              font-size: 13px;
+              margin: 0;
+
+              a {
+                text-decoration: none;
+                color: $pink;
+              }
+
+              .home-footer-contact {
+                padding-right: 1rem;
+                padding-left: 2rem;
+
+                .home-footer-contact-mail {
+                  margin-right: 2rem;
+                  width: 10px;
+                }
+              }
+
+              .home-footer-links {
+                text-align: right;
+                padding-right: 2rem;
+                padding-left: 1rem;
+
+                .home-footer-links-git {
+                  margin-right: 2rem;
+                }
+              }
             }
           }
         }
@@ -104,7 +158,7 @@ body {
           align-items: center;
 
           .container {
-            background: #6b8ba4;
+            background: #000;
             border-radius: 1rem;
             height: 100vh;
             margin: 0;
@@ -122,7 +176,7 @@ body {
               font-size: 2rem;
 
               h1 {
-                  margin: 0;
+                margin: 0;
               }
             }
 
@@ -135,16 +189,56 @@ body {
               flex-direction: row;
               max-height: 100vh;
 
-              .gallery {
+              .gallery-image {
                 width: 20vw;
                 height: 20vw;
                 margin: 10px;
-                border: 3px solid #000;
-                box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+                border: 3px solid $pink;
+                box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
                 max-width: 23vw;
               }
             }
           }
+        }
+
+        &.movie-shelf {
+          @extend %center;
+
+          .container {
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+            @extend %center;
+            .movie-shelf-title {
+              display: flex;
+              height: 7rem;
+              font-size: 2rem;
+              font-weight: 800;
+              color: $pink;
+            }
+
+            .movie-shelf-content {
+              flex: 1;
+              display: flex;
+            }
+          }
+        }
+
+        &.movie {
+          @extend %center;
+
+          .container {
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+          }
+
         }
       }
     }

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <section class="slider" :class="'slide-' + activeSlide">
-      <Home @swipe="handleSwipe"  />
-      <Gallery @swipe="handleSwipe"  />
+      <Home />
+      <Gallery />
+      <MovieShelf />
+      <Movie />
     </section>
   </div>
 </template>
@@ -10,6 +12,8 @@
 <script>
 import Home from './views/Home'
 import Gallery from './views/Gallery'
+import MovieShelf from './views/MovieShelf'
+import Movie from './views/Movie'
 export default {
   name: 'app', 
   computed: {
@@ -19,12 +23,9 @@ export default {
   },
   components: {
     Home,
-    Gallery
-  },
-  methods: {
-    handleSwipe(e) {
-      this.activeSlide = e
-    }
+    Gallery,
+    MovieShelf,
+    Movie
   }
 
 }

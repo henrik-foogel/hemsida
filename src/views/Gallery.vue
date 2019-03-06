@@ -1,6 +1,6 @@
 <template>
-<main class="gallery" v-touch:swipe.right="swipe">
-  <Gallery v-for="(image, index) in images" :key="index" />
+<main class="gallery" v-touch:swipe.right="swipe" v-touch:swipe.left="swipeLeft">
+  <Gallery v-for="(image, index) in images" :key="index" :image="image" />
 </main>
 </template>
 <script>
@@ -18,6 +18,9 @@ export default {
   methods: {
     swipe(){
       this.$store.commit('swipe', 0);
+    },
+    swipeLeft(){
+      this.$store.commit('swipe', 2);
     }
   }
 }

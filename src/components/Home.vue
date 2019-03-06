@@ -10,9 +10,15 @@
         <div class="home-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis soluta pariatur alias repudiandae id, repellendus voluptatibus quidem asperiores aliquid delectus ab architecto optio dolorem accusantium deleniti tempora. Cum, laboriosam?
         </div>
+        <button @click="movie">Movie</button>
+        <div class="home-swipe-text">Swipe left to get to the gallery</div>
       </section>
       <footer class="home-footer">
-        <div>Test-text</div>
+        <div class="home-footer-contact"><a href="mailto: henrik.foogel@gmail.com" class="home-footer-contact-mail">-E-Mail-</a> 
+        <a href="tel: 0739279944" class="home-footer-contact-tel">-Phone-</a> </div>
+        <div class="home-footer-links"><a href="https://github.com/henrik-foogel" target="_blank" class="home-footer-links-git">-Github-</a> 
+        <a href="https://linkedin.com/in/henrik-foogel-3118a53a" target="_blank" class="home-footer-links-linkd">-Linkedin-</a></div>
+
       </footer>
     </section>
   </article>
@@ -21,6 +27,11 @@
 <script>
 export default {
   name: 'Home',
+  methods: {
+    movie() {
+      this.$store.state.activeSlide = 2;
+    }
+  }
 }
 </script>
 
