@@ -1,6 +1,6 @@
 <template>
-<main class="gallery" v-touch:swipe.right="swipe" v-touch:swipe.left="swipeLeft">
-  <Gallery v-for="(image, index) in images" :key="index" :image="image" />
+<main class="gallery">
+  <Gallery />
 </main>
 </template>
 <script>

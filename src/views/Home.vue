@@ -1,5 +1,5 @@
 <template>
-  <main class="home" v-touch:swipe.left="swipe">
+  <main class="home">
     <Home/>
   </main>
 </template>
@@ -19,7 +19,7 @@ export default {
     }
   },
   beforeMount() {
-    this.$store.dispatch("getMovies");
+    this.$store.dispatch('getMovies')
   }
 };
 </script>

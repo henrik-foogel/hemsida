@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <section class="slider" :class="'slide-' + activeSlide">
-      <Home />
-      <Gallery />
-      <MovieShelf />
-      <Movie />
+      <router-view/>
     </section>
   </div>
 </template>
@@ -14,6 +11,7 @@ import Home from './views/Home'
 import Gallery from './views/Gallery'
 import MovieShelf from './views/MovieShelf'
 import Movie from './views/Movie'
+import AddMovie from './views/AddMovie'
 export default {
   name: 'app', 
   computed: {
@@ -25,7 +23,11 @@ export default {
     Home,
     Gallery,
     MovieShelf,
-    Movie
+    Movie,
+    AddMovie
+  },
+  beforeMount() {
+    this.$store.dispatch('getMovies');
   }
 
 }

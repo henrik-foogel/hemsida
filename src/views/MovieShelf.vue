@@ -1,6 +1,6 @@
 <template>
-  <main class="movie-shelf" v-touch:swipe.right="swipe">
-    <Movies v-for="movie in movies" :key="movie.id" :movie="movie"/>
+  <main class="movie-shelf" >
+    <Movies/>
   </main>
 </template>
 
@@ -18,12 +18,12 @@ export default {
     }
   },
   methods: {
-    swipe() {
+    swipeRight() {
       this.$store.commit("swipe", 1);
+    },
+    swipeLeft() {
+      this.$store.commit("swipe", 4);
     }
-  },
-  beforeMount() {
-    this.$store.getters.movies;
   }
 };
 </script>

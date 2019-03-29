@@ -22,6 +22,14 @@ export default new Router({
     {
       path: "/movie",
       component: () => import("./views/Movie.vue")
+    },
+    {
+      path: "/add-movie",
+      component: () => import("./views/AddMovie.vue")
+    },
+    {
+      path: "/movie-shelf",
+      component: () => import("./views/MovieShelf.vue")
     }
   ]
 });

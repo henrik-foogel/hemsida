@@ -1,23 +1,26 @@
 <template>
   <article class="gallery">
     <section class="container">
+    <div class="gallery-back" @click="$router.push('/')">&#x2190;</div>
       <section class="gallery-title">
         <h1>Gallery</h1>
       </section>
-      <section class="gallery-content">
-        <img class="gallery-image" v-for="(image, index) in images" :key="index" :src="image" />
-      </section>
+      <Images />
     </section>
   </article>
 </template>
 
 <script>
+import Images from './Images'
 export default {
   name: 'Gallery',
   props: ['image'],
+    components: {
+        Images
+    },
   computed: {
     images() {
-      return this.$store.state.images
+      return this.$store.getters.getImages
     }
   }
   }

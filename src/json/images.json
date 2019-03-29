@@ -1,5 +1,32 @@
-[ "/@/assets/gallery/1.jpg", "/@/assets/gallery/2.jpg", "/@/assets/gallery/3.jpg", 
-    "/@/assets/gallery/4.jpg", "/@/assets/gallery/5.jpg", "/@/assets/gallery/6.jpg",
-    "/@/assets/gallery/7.jpg", "/@/assets/gallery/8.jpg", "/@/assets/gallery/9.jpg", 
-    "/@/assets/gallery/10.jpg"
-] 
+[
+  {
+    "img": "@/assets/gallery/1.jpg"
+  },
+  {
+    "img": "@/assets/gallery/2.jpg"
+  },
+  {
+    "img": "@/assets/gallery/3.jpg"
+  },
+  {
+    "img": "@/assets/gallery/4.jpg"
+  },
+  {
+    "img": "@/assets/gallery/5.jpg"
+  },
+  {
+    "img": "@/assets/gallery/6.jpg"
+  },
+  {
+    "img": "@/assets/gallery/7.jpg"
+  },
+  {
+    "img": "@/assets/gallery/8.jpg"
+  },
+  {
+    "img": "@/assets/gallery/9.jpg"
+  },
+  {
+    "ing": "@/assets/gallery/10.jpg"
+  }
+]

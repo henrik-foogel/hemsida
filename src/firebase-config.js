@@ -11,5 +11,5 @@ import firebase from 'firebase'
   };
 
   const fb = firebase.initializeApp(config);
-  const db = firebase.database();
+  const db = firebase.firestore();
   export {db, fb}
