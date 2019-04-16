@@ -12,15 +12,14 @@
         </div>
         <div class="home-open-projects-menu-btn">Links to my stuff</div>
         <section class="home-project-buttons">
-          <div class="home-project-movies-btn" @click="$router.push('/movie-shelf')">Movie Gallery</div>
-          <div class="home-project-movies-btn" @click="$router.push('/gallery')">Gallery</div>
+          <div class="home-project-btn fa fa-film" @click="$router.push('/movie-shelf')"></div>
+          <div class="home-project-btn fa fa-file-image-o" @click="$router.push('/gallery')"></div>
         </section>
       </section>
       <footer class="home-footer">
-        <div class="home-footer-contact"><a href="mailto: henrik.foogel@gmail.com" class="home-footer-contact-mail">-E-Mail-</a> 
-        <a href="tel: 0739279944" class="home-footer-contact-tel">-Phone-</a> </div>
-        <div class="home-footer-links"><a href="https://github.com/henrik-foogel" target="_blank" class="home-footer-links-git">-Github-</a> 
-        <a href="https://linkedin.com/in/henrik-foogel-3118a53a" target="_blank" class="home-footer-links-linkd">-Linkedin-</a></div>
+        <div class="home-footer-contact"><a href="mailto: henrik.foogel@gmail.com" class="home-footer-contact-mail"><img src="../assets/gm.svg"></a> 
+        <a href="https://github.com/henrik-foogel" target="_blank" class="home-footer-links-git"><img src="../assets/gi.svg"></a> 
+        <a href="https://linkedin.com/in/henrik-foogel-3118a53a" target="_blank" class="home-footer-links-linkd"><img src="../assets/li.svg"></a></div>
 
       </footer>
     </section>

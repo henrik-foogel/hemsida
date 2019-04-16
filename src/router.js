@@ -26,10 +26,6 @@ export default new Router({
     {
       path: "/add-movie",
       component: () => import("./views/AddMovie.vue")
-    },
-    {
-      path: "/movie-shelf",
-      component: () => import("./views/MovieShelf.vue")
     }
   ]
 });

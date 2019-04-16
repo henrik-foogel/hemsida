@@ -1,0 +1,135 @@
+&.movie-shelf {
+
+    .container {
+      width: 100vw;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      align-items: center;
+      
+      .movies-back {
+        cursor: pointer;
+        color: #fff;
+        margin: .5rem 3rem 0;
+        font-size: 1.5rem;
+      }
+
+      .movie-add-movie {
+        cursor: pointer;
+        color: $green;
+        margin-top: .5rem;
+      }
+
+      .movie-shelf-title {
+        display: flex;
+        height: 5rem;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $pink;
+
+        h1 {
+          margin: 1rem;
+        }
+      }
+
+      .movie-search {
+        display: flex;
+
+        .fa-search:before {
+          top: .5rem; 
+          left: 2rem; 
+          color: rgba(255, 255, 255, 0.2);
+          position: relative;
+          font-size: 1.5rem;
+        }
+
+        input {
+          border: 0;
+          width: 100%;
+          height: 2.5rem;
+          background: rgba(255, 255, 255, 0.1);
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          color: #fff;
+          font-size: 20px;
+          padding-left: 3rem;
+          max-width: -webkit-fill-available;
+          margin-bottom: 1.5rem;
+        }
+
+        .fa-times:before {
+          top: .5rem; 
+          left: -1.7rem; 
+          color: rgba(255, 255, 255, 0.2);
+          position: relative;
+          font-size: 1.5rem;
+          padding: 0;
+          cursor: pointer;
+        }
+
+        .movie-search-criteria {
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          height: 2.6rem;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          border: none;
+          margin-left: -1.18rem;
+
+          option {
+            color: #fff;
+            background: rgb(39, 36, 36);
+
+            &:active {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .dropdown-container {
+        display: flex;
+
+        .dropdown {
+          color: $pink;
+          margin: 0 .5rem;
+          cursor: pointer;
+        }
+      }
+
+      label {
+        z-index: 999;
+        cursor: pointer;
+      }
+
+      label input[type="radio"] {
+        opacity: 0;
+        margin-left: -1rem;
+      }
+
+      .movie-title {
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        color: $green;
+        text-align: center;
+        cursor: pointer;
+
+        .movie-version {
+          color: $pink;
+
+          &.edition {
+            color: rgb(67, 67, 182);
+          }
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.3rem;
+          width: 80%;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+        }
+      }
+    }
+  }

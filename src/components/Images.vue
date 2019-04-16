@@ -44,6 +44,7 @@
             <img class="gallery-image-img" src="@/assets/gallery/8.jpg" v-if="chosenImage == 8" @click="imageLarge = false">
             <img class="gallery-image-img" src="@/assets/gallery/9.jpg" v-if="chosenImage == 9" @click="imageLarge = false">
             <img class="gallery-image-img" src="@/assets/gallery/10.jpg" v-if="chosenImage == 10" @click="imageLarge = false">
+            <span class="fa fa-times" @click="imageLarge = false"></span>
         <div class="gallery-image-slider-slide" @click="nextImage">&#8250;</div>
     </section>
   </section>
