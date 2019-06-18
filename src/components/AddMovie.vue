@@ -1,7 +1,7 @@
 <template>
   <article class="add-movie-art">
     <section class="container">
-    <div class="add-movie-back" @click="$router.push('/movie-shelf')">&#x2190;</div>
+    <div class="back-btn" @click="$router.push('/movie-shelf')">&#x2190;</div>
       <section class="add-movie-title">
         <h3>Add Movies</h3>
       </section>

@@ -4,12 +4,13 @@
     .container {
       justify-self: center;
       display: grid;
-      background: black;
-      color: #fff;
+      background: $background;
+      color: $grayTextDark;
       border-radius: 1rem;
       width: 100vw;
       max-width: 600px;
       min-height: 100vh;
+      padding: 0 0 2rem;
       grid-template-columns: 1fr;
       grid-template-rows: 9rem auto 8rem;
       grid-template-areas:
@@ -27,13 +28,14 @@
         h1 {
           flex: 1;
           margin: 3rem 0 0;
-          color: $pink;
+          color: $grayTextDark;
         }
         p {
           flex: 2;
           font-size: 1rem;
           margin: .6rem;
           font-weight: 600;
+          color: $grayTextLight;
         }
       }
 
@@ -46,14 +48,13 @@
         max-width: 500px;
 
         img {
-          flex: 1;
           width: 9rem;
           border-radius: 999rem;
           margin: 0 0 2rem;
+          border: 2px solid $grayTextDark;
         }
 
         .home-text {
-          flex: 2;
           text-align: justify;
           padding: 1rem;
         }
@@ -73,10 +74,15 @@
           width: 100%;
 
           .home-project-btn {
-            padding: .6rem;
+            display: flex;
+            @extend %center;
+            padding: 1rem;
+            width: 3rem;
+            height: 3rem;
             border-radius: 999rem;
-            border: 1px solid $pink;
-            color: $green;
+            border: 1px solid $grayTextDark;
+            background: $grayTextLightest;
+            color: black;
             cursor: pointer;
           }
         }
@@ -89,14 +95,17 @@
         display: flex;
         align-items: center;
         font-size: 13px;
-        margin: 0;
+        margin: 0 0 1rem;
 
         a {
           text-decoration: none;
           color: $pink;
           border-radius: 9999rem;
-          background: #fff;
-          padding: .3rem;
+          background: $grayTextLightest;
+          padding: .7rem;
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid $grayTextDark;
         }
 
         .home-footer-contact {
@@ -109,37 +118,43 @@
           .home-footer-contact-mail {
             margin-right: 2rem;
             border-radius: 9999rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-              width: 2rem;
-              height: 2rem;
+              width: 100%;
               margin: 0 .1rem;
             }
           }
 
           .home-footer-contact-tel {
             font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             p {
               margin: 0;
-              width: 2rem;
-              height: 2rem;
+              width: 100%
             }
           }
           .home-footer-links-git {
             margin-right: 2rem;
-            background: #fff;
-            padding: .3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-              width: 2rem;
-              height: 2rem;
+              width: 100%;
               margin: 0 .1rem
             }
           }
           .home-footer-links-linkd {
-            background: #fff;
-            padding: .3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             img {
               width: 2rem;
               height: 2rem;
@@ -155,9 +170,6 @@
           justify-content: center;
           align-items: center;
 
-          
-
-        
         }
       }
     }

@@ -4,21 +4,21 @@
   .container {
     color: white;
     width: 100vw;
-    height: 100vh;
-    background: #000;
+    height: 100%;
+    background: $background;
     display: flex;
     flex-direction: column;
     @extend %center;
 
     .selected-movie-back {
       cursor: pointer;
-      color: #fff;
+      color: black;
       font-size: 1.5rem;
     }
 
     .selected-movie {
       margin: 0.5rem;
-      max-width: 22rem;
+      width: 30rem;
       display: flex;
       flex-direction: column;
 
@@ -27,22 +27,25 @@
         text-align: left;
         width: 100%;
         display: flex;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+        flex-direction: column;
+
+        border-bottom: 1px solid $grayTextLight;
 
 
         span {
           &.selected-movie-text {
             font-size: 1.2rem;
-            align-self: center;
-            color: $pink;
+            color: $blue;
           }
 
           &.selected-movie-chosen {
-            text-align: right;
+            text-align: left;
             width: 100%;
             margin: 0;
-            color: $green;
+            color: $grayTextDark;
             font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
           }
 
           &.color {
@@ -51,8 +54,7 @@
 
           &.selected-movie-filter {
             cursor: pointer;
-            color: $green;
-            margin: 0 0 0 5rem;
+            color: $grayTextDark;
             width: 100%;
           }
         }

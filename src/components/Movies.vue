@@ -1,7 +1,7 @@
 <template>
   <article class="movies">
     <section class="container">
-    <div class="movies-back" @click="$router.push('/')">&#x2190;</div>
+    <div class="back-btn" @click="$router.push('/')">&#x2190;</div>
     <div class="movie-add-movie" @click="$router.push('/add-movie')">Add movie</div>
       <section class="movie-shelf-title">
         <h1>My Movie Collection</h1>
@@ -10,12 +10,13 @@
         <span
           class="fa fa-search"></span>
         <input type="text" v-model="search" placeholder="search movies">
-        <span class="fa fa-times" @click="search = ''"></span>
+        <span class="fa fa-times" @click="search = ''; chosenSearchCriteria = 'Movies'"></span>
         <select class="movie-search-criteria" v-model="chosenSearchCriteria">
             <option v-for="(search, index) in searchCriteria" :key="index">{{ search }}</option>
         </select>
       </section>
       <div class="dropdown-container">
+        <div class="drop-button-container">
       <section class="dropdown" @click="showDropDown = !showDropDown, drop = 'genre'">
         Genres
       </section>
@@ -23,9 +24,12 @@
         Shelfs
       </section>
       </div>
-        <label class="genres" v-show="showDropDown && drop == 'genre'" v-for="genre in genres" @click="genreFilterOnOff(genre)" :key="genre"><input type="radio"/>{{ genre }}</label>
-        <label class="genres" v-show="showDropDown && drop == 'shelf'" v-for="shelf in shelfs" @click="shelfFilterOnOff(shelf)" :key="(shelf+'shelf')"><input type="radio"/>{{ shelf }}</label>
-      <div class="movie-title" v-for="movie in filteredMovies" :key="movie.id" @click="chosenMovie(movie)" ><span style="">{{ movie.title }}</span> (<span class="movie-version">{{ movie.version.format }}</span>, <span class="movie-version edition">{{ movie.version.edition }}</span>)</div>
+      <div class="drop">
+        <label class="genres gen" v-show="showDropDown && drop == 'genre'" v-for="genre in genres" @click="genreFilterOnOff(genre)" :key="genre"><input type="radio"/>{{ genre }}</label>
+        <label class="genres she" v-show="showDropDown && drop == 'shelf'" v-for="shelf in shelfs" @click="shelfFilterOnOff(shelf)" :key="(shelf+'shelf')"><input type="radio"/>{{ shelf }}</label>
+        </div>
+      <div class="movie-title" v-for="movie in filteredMovies" :key="movie.id" ><span @click="chosenMovie(movie)" style="">{{ movie.title }}</span> (<span @click="version(movie.version.format)" class="movie-version">{{ movie.version.format }}</span>, <span class="movie-version edition" @click="version(movie.version.edition)">{{ movie.version.edition }}</span>)</div>
+      </div>
     </section>
   </article>
 </template>
@@ -92,8 +96,17 @@ export default {
         }
           return movie.music[0].toLowerCase().includes(this.search.toLowerCase()) || movie.music[two].toLowerCase().includes(this.search.toLowerCase()) || movie.music[three].toLowerCase().includes(this.search.toLowerCase());
         });
-      } 
+      } else if(this.chosenSearchCriteria == 'DVD' || this.chosenSearchCriteria == 'Blu-ray' || this.chosenSearchCriteria == 'Blu-ray/DVD' || this.chosenSearchCriteria == 'VHS') {
+        return this.movies.filter((movie) => {
+          return movie.version.format.includes(this.chosenSearchCriteria);
+        });
+      } else if(this.chosenSearchCriteria == 'Special' ||this.chosenSearchCriteria == 'Steelbook' || this.chosenSearchCriteria == 'Collection' || this.chosenSearchCriteria == "Collector's" || this.chosenSearchCriteria == 'Regular' || this.chosenSearchCriteria == 'Limited' || this.chosenSearchCriteria == 'Limited/Collection') {
+        return this.movies.filter((movie) => {
+          return movie.version.edition.includes(this.chosenSearchCriteria);
+        });
+      }
      },
+
     genres() {
       return this.$store.getters.getGenres
     },
@@ -131,7 +144,11 @@ export default {
           this.showByGenre = true
           this.showByShelf = false
         }
-      }
+      },
+      
+     version(version) {
+       this.chosenSearchCriteria = version;
+     },
   },
   beforeMount() {
     this.$store.dispatch('getMovies');

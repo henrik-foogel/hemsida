@@ -3,19 +3,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-%center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-$pink: rgb(255, 0, 179);
-$green: #1db901;
+@import '__variables';
+@import '__components';
 
 body {
   margin: 0;
   height: 100vh;
-  background: purple;
+  background: $behind;
 
   #app {
     margin: 0;
@@ -40,6 +35,7 @@ body {
         @import 'movie';
         
         @import 'add-movie';
+
 
       }
     }

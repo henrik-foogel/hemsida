@@ -11,14 +11,14 @@ export default new Vuex.Store({
     movies: [],
     images: ImageJson,
     chosenMovie: {'title': 'test', 'director': ['test'], 'cast': ['1', '2', '3'], 'music': ['test'], 'year': 1900, 'genre': 'test', 'secondgenre': 'test', 'rating': 1, 'shelf': 'test', 'id': 1, 'version': [{'format': 'test'}, {'edition': 'test'}, {'discs': 1}]},
-    genres: ['All', 'Action', 'Adventure', 'Drama', 'Fantasy', 'Horror', 'Thriller', 'Sci-Fi', 'Western', 'Crime'],
-    genresToAdd: ['Action', 'Adventure', 'Animation', 'Drama', 'Fantasy', 'Horror', 'Thriller', 'Sci-Fi', 'Western', 'Crime'],
+    genres: ['All', 'Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Thriller', 'Sci-Fi', 'Western', 'Crime'],
+    genresToAdd: ['Action', 'Adventure', 'Animation', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Thriller', 'Sci-Fi', 'Western', 'Crime'],
     shelfs: ['Classic Action Stars', 'Bruce Campbell', 'John Carpenter', 'Action', 'Drama', 'Fantasy', 'Comedy', 'Sci-Fi', 'Horror/Thriller', 'Musical', 'Animation', 'Western', 'Documentary', 'Music', 'Boxes', 'Steelbooks', 'Special'],
     shelfsSearch: ['All', 'Classic Action Stars', 'Bruce Campbell', 'John Carpenter', 'Action', 'Drama', 'Fantasy', 'Comedy', 'Sci-Fi', 'Horror/Thriller', 'Musical', 'Animation', 'Western', 'Documentary', 'Music', 'Boxes', 'Steelbooks', 'Special'],
     chosenSearchCriteria: 'Movies',
     search: '',
     format: ['Blu-ray', 'DVD', 'Blu-ray/DVD', 'VHS'],
-    edition: ["Regular", "Collector's", "Special", "Collection", "Steelbook", "Limited", "Limited Collection"]
+    edition: ["Regular", "Collector's", "Special", "Collection", "Steelbook", "Limited", "Limited/Collection"]
   },
   mutations: {
     swipe(state, activeSlide) {

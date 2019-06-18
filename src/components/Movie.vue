@@ -1,7 +1,7 @@
 <template>
   <article class="movie">
     <section class="container">
-    <div class="selected-movie-back" @click="back()">&#x2190;</div>
+    <div class="back-btn" @click="back()">&#x2190;</div>
       <section class="selected-movie">
           <div><span class="selected-movie-text">Title: </span>
           <span class="selected-movie-chosen">{{ selectedMovie.title }}</span></div>

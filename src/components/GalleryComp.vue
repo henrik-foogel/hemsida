@@ -1,7 +1,7 @@
 <template>
   <article class="gallery">
     <section class="container">
-    <div class="gallery-back" @click="$router.push('/')">&#x2190;</div>
+    <div class="back-btn" @click="$router.push('/')">&#x2190;</div>
       <section class="gallery-title">
         <h1>Gallery</h1>
       </section>

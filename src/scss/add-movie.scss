@@ -1,11 +1,11 @@
 &.add-movie {
     @extend %center;
-    color: $pink;
+    color: $grayTextDark;
 
     .container {
       width: 100vw;
       min-height: 100vh;
-      background: #000;
+      background: $background;
       display: flex;
       padding-bottom: 2rem;
       flex-direction: column;
@@ -25,7 +25,7 @@
 
         h4 {
           margin: 0;
-          color: $green;
+          color: $blue;
         }
 
         .add-movie-input {
@@ -33,9 +33,9 @@
           width: 90%;
           max-width: 380px;
           height: 2rem;
-          background: rgba(255, 255, 255, 0.2);
+          background: $grayTextLighter;
           border-radius: 3px;
-          color: #fff;
+          color: $grayTextDark;
           font-size: 16px;
           padding-left: 0.5rem;
 
@@ -48,37 +48,40 @@
               border: 0;
               width: 100%;
               height: 2rem;
-              background: rgba(255, 255, 255, 0.1);
+              background: $grayTextLightest;
               border-radius: 3px;
-              color: black;
+              color: $grayTextDark;
             }
           }
         }
 
         .add-movie-cast {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           width: 100vw;
-          justify-content: center;
+          align-items: center;
 
           .cast {
-            background: rgba(255, 255, 255, 0.2);
-            width: 7.3rem;
+            background: $grayTextLighter;
             border: none;
-            padding: 0.3rem 0.1rem;
-            color: #fff;
-            padding-left: 0.5rem;
+            padding: 0.6rem 0.35rem;
+            color: $grayTextDark;
+            width: 90%;
+            max-width: 380px;
+            border-radius: 2px;
+            margin: .3rem;
           }
         }
 
         .add-movie-btn {
           text-align: center;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid $grayTextDark;
+          background: $grayTextLighter;
           border-radius: 0.5rem;
           margin: 0.5rem;
           padding: 0.5rem;
           cursor: pointer;
+          color: $blue;
         }
       }
     }

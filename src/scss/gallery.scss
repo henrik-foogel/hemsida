@@ -5,7 +5,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      background: #000;
+      background: $background;
       border-radius: 1rem;
       margin: 0;
       width: 100vw;
@@ -13,7 +13,7 @@
 
       .gallery-back {
         cursor: pointer;
-        color: #fff;
+        color: black;
         margin: .5rem 3rem 0;
         font-size: 1.5rem;
         align-self: center;
@@ -24,7 +24,7 @@
         font-size: 2rem;
 
         h1 {
-          color: $green;
+          color: $grayTextDark;
           margin: 0 1rem 1rem;;
         }
       }
@@ -39,13 +39,14 @@
 
           .gallery-image {
             display: flex;
+            background: $grayTextLightest;
             width: 15vw;
             height: 15vw;
             margin: 0.2rem;
-            border: 3px solid $pink;
+            border: 3px solid $grayTextLight;
             box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
             min-width: 20rem;
-            min-height: 20rem;
+            min-height: 13rem;
             align-items: center;
             justify-content: center;
             overflow: hidden;
@@ -76,15 +77,15 @@
             display: flex;
             align-self: baseline;
             font-size: 3rem;
-            color: rgb(255, 255, 255);
+            color: $blue;
             cursor: pointer;
             margin-left: -2.6rem;
-            margin-top: .01rem;
+            margin-top: 1.5rem;
             text-shadow: #000 2px 1px;
           }
           
           .gallery-image-slider-slide {
-            color: $green;
+            color: $blue;
             font-size: 5rem;
             cursor: pointer;
             margin: 20rem 1rem;
