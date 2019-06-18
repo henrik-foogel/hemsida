@@ -25,17 +25,18 @@
         flex-direction: column;
         @extend %center;
         font-weight: 800;
+
         h1 {
-          flex: 1;
-          margin: 3rem 0 0;
+          margin: 2rem 0 0;
           color: $grayTextDark;
         }
         p {
-          flex: 2;
           font-size: 1rem;
-          margin: .6rem;
+          margin: 0;
           font-weight: 600;
           color: $grayTextLight;
+          width: 100%;
+          text-align: center;
         }
       }
 
