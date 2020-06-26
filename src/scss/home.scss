@@ -2,24 +2,19 @@
     @extend %center;
 
     .container {
-      justify-self: center;
-      display: grid;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background: $background;
       color: $grayTextDark;
       border-radius: 1rem;
       width: 100vw;
       max-width: 600px;
       min-height: 100vh;
-      padding: 0 0 2rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: 9rem auto 8rem;
-      grid-template-areas:
-        "home-title"
-        "home-content"
-        "home-footer";
+      padding: 0 0 1rem;
 
       .home-title {
-        grid-area: home-title;
         font-size: 2rem;
         display: flex;
         flex-direction: column;
@@ -34,16 +29,15 @@
           font-size: 1rem;
           margin: 0;
           font-weight: 600;
-          color: $grayTextLight;
+          color: $grayTextDark;
           width: 100%;
           text-align: center;
         }
       }
 
       .home-content {
-        grid-area: home-content;
         @extend %center;
-        justify-self: center;
+        justify-content: space-between;
         display: flex;
         flex-direction: column;
         max-width: 500px;
@@ -51,17 +45,21 @@
         img {
           width: 9rem;
           border-radius: 999rem;
-          margin: 0 0 2rem;
+          margin: 1rem 0 1.5rem;
           border: 2px solid $grayTextDark;
         }
 
         .home-text {
           text-align: justify;
-          padding: 1rem;
+          padding: 2rem 1rem 2rem;
+          font-weight: 700;
+          border-bottom: 1px solid $grayTextLight;
+          border-top: 1px solid $grayTextLight;
         }
 
         .home-open-projects-menu-btn {
-          margin: 4rem;
+          margin: 2rem 4rem 7rem;
+          font-weight: 700;
         }
 
         .home-project-buttons {
@@ -74,23 +72,35 @@
           justify-content: space-evenly;
           width: 100%;
 
-          .home-project-btn {
+          .home-project-buttons-container {
             display: flex;
-            @extend %center;
-            padding: 1rem;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 999rem;
-            border: 1px solid $grayTextDark;
-            background: $grayTextLightest;
-            color: black;
-            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+
+            .home-project-btn {
+              display: flex;
+              @extend %center;
+              padding: 1rem;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 999rem;
+              border: 1px solid $grayTextDark;
+              background: $behind;
+              color: black;
+              cursor: pointer;
+            }
+
+            p {
+              font-size: 1rem;
+              font-weight: 700;
+            }
           }
         }
       }
 
       .home-footer {
-        grid-area: home-footer;
         @extend %center;
         padding: 0.5rem 0 0 0;
         display: flex;
@@ -102,7 +112,7 @@
           text-decoration: none;
           color: $pink;
           border-radius: 9999rem;
-          background: $grayTextLightest;
+          background: $behind;
           padding: .7rem;
           width: 2rem;
           height: 2rem;
@@ -110,11 +120,10 @@
         }
 
         .home-footer-contact {
-          padding-right: 1rem;
-          padding-left: 2rem;
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-between;
           width: 100%;
+          margin-top: 3rem;
 
           .home-footer-contact-mail {
             margin-right: 2rem;
@@ -170,7 +179,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-
         }
       }
     }

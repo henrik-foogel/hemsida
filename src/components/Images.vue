@@ -31,6 +31,12 @@
     <div class="gallery-image" @click="imageLarge = true, chosenImage = 10">
       <img class="gallery-image-img" src="@/assets/gallery/10.jpg">
     </div>
+    <div class="gallery-image" @click="imageLarge = true, chosenImage = 11">
+      <img class="gallery-image-img" src="@/assets/gallery/11.jpg">
+    </div>
+    <div class="gallery-image" @click="imageLarge = true, chosenImage = 12">
+      <img class="gallery-image-img" src="@/assets/gallery/12.jpg">
+    </div>
     </div>
     <section class="gallery-image-slider" v-show="imageLarge">
         <div class="gallery-image-slider-slide" @click="lastImage">&#8249;</div>
@@ -44,6 +50,8 @@
             <img class="gallery-image-img" src="@/assets/gallery/8.jpg" v-if="chosenImage == 8" @click="imageLarge = false">
             <img class="gallery-image-img" src="@/assets/gallery/9.jpg" v-if="chosenImage == 9" @click="imageLarge = false">
             <img class="gallery-image-img" src="@/assets/gallery/10.jpg" v-if="chosenImage == 10" @click="imageLarge = false">
+            <img class="gallery-image-img" src="@/assets/gallery/11.jpg" v-if="chosenImage == 11" @click="imageLarge = false">
+            <img class="gallery-image-img" src="@/assets/gallery/12.jpg" v-if="chosenImage == 12" @click="imageLarge = false">
             <span class="fa fa-times" @click="imageLarge = false"></span>
         <div class="gallery-image-slider-slide" @click="nextImage">&#8250;</div>
     </section>
