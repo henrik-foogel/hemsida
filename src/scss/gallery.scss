@@ -13,7 +13,7 @@
 
       .gallery-back {
         cursor: pointer;
-        color: black;
+        color: $text;
         margin: .5rem 3rem 0;
         font-size: 1.5rem;
         align-self: center;
@@ -24,7 +24,7 @@
         font-size: 2rem;
 
         h1 {
-          color: $grayTextDark;
+          color: $text;
           margin: 0 1rem 1rem;;
         }
       }
@@ -68,24 +68,26 @@
 
             .gallery-image-slider-slide{
               margin: 10rem 1rem;
-
+              color: $text;
             }
           }
 
           .fa-times {
-            color: white;
             display: flex;
             align-self: baseline;
             font-size: 3rem;
-            color: $blue;
+            color: $text;
             cursor: pointer;
-            margin-left: -2.6rem;
-            margin-top: 1.5rem;
-            text-shadow: #000 2px 1px;
+            margin-left: -3.6rem;
+            margin-top: .8rem;
+            text-shadow: #000 2px 2px;
+            background: $grayTextLight;
+            border-radius: 99999rem;
+            padding: 0 .45rem .2rem;
           }
           
           .gallery-image-slider-slide {
-            color: $blue;
+            color: $text;
             font-size: 5rem;
             cursor: pointer;
             margin: 20rem 1rem;
