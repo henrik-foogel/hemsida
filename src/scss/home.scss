@@ -42,22 +42,11 @@
         flex-direction: column;
         max-width: 500px;
 
-        img {
+        .top-photo {
           width: 9rem;
           border-radius: 999rem;
           margin: 1rem 0 1.5rem;
           border: 2px solid $grayTextDark;
-        }
-
-        .home-text {
-          padding: 2rem 1.5rem 2rem;
-          font-weight: 700;
-          border-bottom: 1px solid $grayTextLight;
-          border-top: 1px solid $grayTextLight;
-          background: $behind;
-          border-radius: 1rem;
-          line-height: 1.5;
-          letter-spacing: 0.05em;
         }
 
         .home-open-projects-menu-btn {
@@ -91,7 +80,7 @@
               height: 3rem;
               border-radius: 999rem;
               border: 1px solid $grayTextDark;
-              background: $behind;
+              background: $inner;
               color: black;
               cursor: pointer;
             }
@@ -117,7 +106,7 @@
           text-decoration: none;
           color: $pink;
           border-radius: 9999rem;
-          background: $behind;
+          background: $inner;
           padding: .7rem;
           width: 2rem;
           height: 2rem;

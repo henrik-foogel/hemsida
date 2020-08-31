@@ -1,0 +1,55 @@
+.home-text {
+          padding: 2rem 1.5rem 2rem;
+          font-weight: 700;
+          border-bottom: 1px solid $grayTextLight;
+          border-top: 1px solid $grayTextLight;
+          background: $inner;
+          border-radius: 1rem;
+          line-height: 1.5;
+          letter-spacing: 0.05em;
+        }
+
+        .home-open-projects-menu-btn {
+          margin: 2rem 4rem 7rem;
+          font-weight: 700;
+          color: $text;
+        }
+
+        .home-project-buttons {
+          display: flex;
+          height: 1.5rem;
+          margin-top: -2.4rem;
+          font-size: 2.5rem;
+          margin-bottom: 0.7rem;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+
+          .home-project-buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+
+            .home-project-btn {
+              display: flex;
+              @extend %center;
+              padding: 1rem;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 999rem;
+              border: 1px solid $grayTextDark;
+              background: $inner;
+              color: black;
+              cursor: pointer;
+            }
+
+            p {
+              font-size: 1rem;
+              font-weight: 700;
+              color: $text;
+            }
+          }
+        }
+      }

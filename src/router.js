@@ -15,17 +15,5 @@ export default new Router({
       path: "/gallery",
       component: () => import("./views/Gallery.vue")
     },
-    {
-      path: "/movie-shelf",
-      component: () => import("./views/MovieShelf.vue")
-    },
-    {
-      path: "/movie",
-      component: () => import("./views/Movie.vue")
-    },
-    {
-      path: "/add-movie",
-      component: () => import("./views/AddMovie.vue")
-    }
   ]
 });
